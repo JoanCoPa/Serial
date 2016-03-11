@@ -1,6 +1,6 @@
 /*************************************************************************
 **                                                                      **
-**                            Programa 4 ex.2                           **
+**                            Programa 4 ex.7                           **
 **                                                                      **
 *************************************************************************/
 
@@ -10,21 +10,22 @@
 
 //****** Variables *******************************************************
 
-int tempAigua = 101;
-
+int comptar = 10;
+int num = 11;
 //****** secup ***********************************************************
 void setup() {
-Serial.begin(9600);     // parlem amb l'arduino a 9600 bps! :3
-
-  if ( tempAigua > 99)  //quan l'aigua supera als 99C es veu el serial
-   Serial.print("Aigua bullint!");
-  
-  else  //quan l'aigua no te 100c es veu l'altre serial
-   Serial.print("Aigua encara no bull, pero pot cremar T_T");  
-  } 
-        
+Serial.begin(9600);     // parlem amb l'arduino a 9600 bps! つ◕_◕ つ
+ Serial.print("Ara comptare de 0 a ");
+ Serial.println(num);
+ 
+for (int i=0; i <= comptar; i++)
+ {
+   Serial.print(i);
+   Serial.print("-"); //D'aquesta manera sortirà un - entre numeros
+   } 
+ Serial.print("11");    
+}        
 
 //****** Loop ************************************************************
 void loop() {
-
 }

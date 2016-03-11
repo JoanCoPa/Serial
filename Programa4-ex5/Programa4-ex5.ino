@@ -1,6 +1,6 @@
 /*************************************************************************
 **                                                                      **
-**                            Programa 4 ex.2                           **
+**                            Programa 4 ex.5                           **
 **                                                                      **
 *************************************************************************/
 
@@ -10,21 +10,31 @@
 
 //****** Variables *******************************************************
 
-int tempAigua = 101;
+int sensorReading = 4;
 
 //****** secup ***********************************************************
 void setup() {
 Serial.begin(9600);     // parlem amb l'arduino a 9600 bps! :3
-
-  if ( tempAigua > 99)  //quan l'aigua supera als 99C es veu el serial
-   Serial.print("Aigua bullint!");
-  
-  else  //quan l'aigua no te 100c es veu l'altre serial
-   Serial.print("Aigua encara no bull, pero pot cremar T_T");  
-  } 
-        
+ Serial.print("The day is..."); 
+   
+  switch (sensorReading) {
+  case 0:    
+    Serial.println("dark");
+    break;
+  case 1:    
+    Serial.println("dim");
+    break;
+  case 2:    
+    Serial.println("medium");
+    break;
+  case 3:
+    Serial.println("bright");
+    break;
+  default:
+    Serial.println("... TRAMBOLIKO!");  
+  } //Selecciona el cas a partir de la lectura del sensor O_o
+}        
 
 //****** Loop ************************************************************
 void loop() {
-
 }
